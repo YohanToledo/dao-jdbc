@@ -43,6 +43,12 @@ public class Program {
 		System.out.println("Insert completed! newSeller Id = " + newSeller.getId());
 		
 		
+		System.out.println("\n--- TEST 5: update() ---");
+		seller = sellerDao.findById(8);
+		seller.setBaseSalary(15000.0);
+		sellerDao.update(seller);
+		System.out.println("Update completed!");
+		
 	}
 
 }
