@@ -10,9 +10,22 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
+		System.out.println("\n--- TEST 1: insert() ---");
 		Department dep = new Department();
 		dep.setName("Publishing");
 		departmentDao.insert(dep);
+		
+		System.out.println("\n--- TEST 2: update() ---");
+		dep.setName("newUpdatedName");
+		departmentDao.update(dep);
+		
+		System.out.println("\n--- TEST 3: delete() ---");
+		departmentDao.deleteById(10);
+		
+		System.out.println("\n--- TEST 4: findById() ---");
+		dep = departmentDao.findById(11);
+		System.out.println(dep);
+		
 		
 	}
 
